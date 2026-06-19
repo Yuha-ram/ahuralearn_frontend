@@ -1,0 +1,240 @@
+.aiStudyPlanPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 34px 38px 72px;
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0) 40%
+    ),
+    linear-gradient(180deg, #f6f8fb 0%, #eef3f9 100%);
+}
+
+.pageStatus {
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pageHeader {
+  margin-bottom: 22px;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.pageHeader p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.builderLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+.chatCard {
+  display: flex;
+  flex-direction: column;
+  height: var(--preview-card-height, 560px);
+  min-height: 520px;
+  padding: 24px;
+  border: 1px solid #dbe3ef;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 18px 32px rgba(45, 64, 93, 0.12);
+}
+
+.chatList {
+  display: grid;
+  flex: 1 1 auto;
+  gap: 22px;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e7edf6;
+}
+
+.messageRow {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  animation: messageIn 260ms ease-out both;
+}
+
+.userMessageRow {
+  grid-template-columns: minmax(0, 1fr) 34px;
+  justify-items: end;
+}
+
+.botIcon,
+.userDot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: #4a90e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userDot {
+  background: #f2f4f7;
+  box-shadow: inset 0 0 0 1px #e2e8f0;
+}
+
+.messageBubble {
+  max-width: 620px;
+  margin: 0;
+  padding: 15px 18px;
+  border-radius: 14px;
+  background: #eef3f9;
+  color: #0f172a;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.typingBubble {
+  color: #64748b;
+  font-style: italic;
+}
+
+.userBubble {
+  background: #4a90e2;
+  color: #ffffff;
+}
+
+.messageMeta {
+  display: block;
+  margin-top: 8px;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.userMessageRow .messageMeta {
+  text-align: right;
+}
+
+.suggestionsBlock {
+  flex: 0 0 auto;
+  padding: 18px 0 16px;
+}
+
+.chatList + .answerBar {
+  margin-top: 18px;
+}
+
+.suggestionsBlock > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #4a90e2;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.suggestionChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.suggestionChips button {
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  padding: 9px 16px;
+  background: #eff6ff;
+  color: #4a90e2;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.suggestionChips button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.answerBar {
+  display: grid;
+  flex: 0 0 auto;
+  grid-template-columns: minmax(0, 1fr) 42px;
+  gap: 10px;
+}
+
+.answerBar input {
+  min-width: 0;
+  height: 48px;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  padding: 0 16px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 14px;
+  outline: none;
+}
+
+.answerBar input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.14);
+}
+
+.answerBar input:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.answerBar button {
+  border: none;
+  border-radius: 12px;
+  background: #4a90e2;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(74, 144, 226, 0.22);
+}
+
+.answerBar button:disabled {
+  cursor: default;
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .builderLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .chatCard {
+    height: auto;
+    min-height: 520px;
+  }
+}

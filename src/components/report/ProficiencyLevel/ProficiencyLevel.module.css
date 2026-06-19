@@ -1,0 +1,122 @@
+.card {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 22px;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.04);
+}
+
+.card h2 {
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #0f172a;
+
+  text-align: center;
+
+  margin-bottom: 24px;
+}
+
+.proficiencyCard {
+  height: 420px;
+}
+
+/* ===== Progress Ring ===== */
+
+.progressRing {
+  position: relative;
+
+  width: 220px;
+  height: 220px;
+
+  margin: 10px auto 24px;
+}
+
+.progressRing svg {
+  overflow: visible;
+}
+
+.ringBg {
+  fill: none;
+
+  stroke: #e7edf5;
+
+  stroke-width: 12;
+}
+
+.ringProgress {
+  fill: none;
+
+  stroke: #0d9488;
+  stroke-width: 12;
+
+  stroke-linecap: round;
+
+  transform: rotate(-90deg);
+  transform-origin: center;
+
+  animation:
+    progressAnimation 2s ease forwards;
+}
+
+.ringCenter {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreNumber {
+  font-size: 64px;
+  font-weight: 800;
+
+  color: #0d9488;
+
+  line-height: 1;
+}
+
+.scoreLevel {
+  margin-top: 2px;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  font-weight: 700;
+
+  color: #64748b;
+}
+
+.scoreText {
+  width: 240px;
+
+  margin: 18px auto 0;
+
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: #64748b;
+}
+
+/* ===== Animation ===== */
+
+@keyframes progressFill {
+  to {
+    stroke-dashoffset: 60;
+  }
+}
+
+@keyframes progressAnimation {
+  from {
+    stroke-dashoffset: 490;
+  }
+}

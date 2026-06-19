@@ -1,0 +1,51 @@
+.timerContainer {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+}
+
+.timerHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 1rem;
+}
+
+.timeDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timeBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.value {
+  font-size: 1.15rem;
+  color: #0b5edd;
+  font-weight: 700;
+  font-family: monospace; /* 等宽字体让时间跳动时不闪烁 */
+}
+
+/* 当前题目的高亮样式 */
+.currentBlock {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}

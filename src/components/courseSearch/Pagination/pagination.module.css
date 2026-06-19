@@ -1,0 +1,68 @@
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pageBtn {
+  background-color: transparent;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #3f3f46;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background-color: #f4f4f5;
+  color: #18181b;
+}
+
+.pageBtn:disabled {
+  color: #a1a1aa;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagesWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pageNumberBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  background-color: transparent;
+  color: #3f3f46;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.25rem; /* 微圆角矩形 */
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pageNumberBtn:hover:not(.activePage) {
+  background-color: #f4f4f5;
+}
+
+.dots {
+  color: #a1a1aa;
+  padding: 0 0.25rem;
+  letter-spacing: 0.1em;
+}
+
+/* 高亮的黄色，根据需求：一种突出、美观、高对比度的颜色 */
+.activePage {
+  background-color: #fddf47c9; /* 亮黄色 */
+  color: #18181b; /* 深色文字以保证对比度 */
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(253, 224, 71, 0.4);
+}

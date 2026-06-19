@@ -1,0 +1,183 @@
+/* src/components/featureHub/FeatureCard/featureCard.module.css */
+
+.cardContainer {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 3rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* 调整整体卡片背景，根据 UI 图可以看到一点微微的背景色，这里为了和外层区分，我们先保留白色，后面如果需要，可以通过外层网格控制或者添加浅色底 */
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05); /* 柔和一点的阴影，更贴近 UI 效果 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+@keyframes softElegantGlow {
+  0% { 
+    box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px rgba(var(--theme-glow, 148, 163, 184), 0.3), 0 10px 20px rgba(var(--theme-glow, 148, 163, 184), 0.1); 
+    transform: translateY(0) scale(1); 
+  }
+  50% { 
+    box-shadow: 0 0 0 4px #ffffff, 0 0 0 8px rgba(var(--theme-glow, 148, 163, 184), 0.5), 0 20px 40px rgba(var(--theme-glow, 148, 163, 184), 0.2); 
+    transform: translateY(-4px) scale(1.02); 
+  }
+  100% { 
+    box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px rgba(var(--theme-glow, 148, 163, 184), 0.3), 0 10px 20px rgba(var(--theme-glow, 148, 163, 184), 0.1); 
+    transform: translateY(0) scale(1); 
+  }
+}
+
+.glowingHighlight {
+  animation: softElegantGlow 2.5s ease-in-out infinite;
+  z-index: 10;
+  position: relative;
+}
+
+.cardContainer:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+.iconWrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  flex-grow: 1;
+}
+
+.tryButton {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+/* 
+ * 【初学者提示】主题定义区域。
+ * 下面定义了6种主题。当父组件把主题对应的类名（例如 .themeBlue）加到最外层的根节点上之后，
+ * 就可以通过组合选择器控制内部元素的颜色。
+ * 格式： .themeBlue .iconWrapper 表示「在 .themeBlue 类名内部的 .iconWrapper 元素」。
+ */
+
+/* ================= 1. 蓝色主题 ================= */
+.themeBlue {
+  background-color: #eff6ff; /* 添加非常淡的蓝色底色 */
+  --theme-glow: 59, 130, 246;
+}
+.themeBlue .iconWrapper {
+  background-color: #3b82f6;
+  box-shadow: 0 15px 25px -5px rgba(59, 130, 246, 0.4);
+}
+.themeBlue .tryButton {
+  background-color: #3b82f6;
+}
+.themeBlue .tryButton:hover {
+  background-color: #2563eb;
+}
+
+/* ================= 2. 绿色主题 ================= */
+.themeGreen {
+  background-color: #ecfdf5; 
+  --theme-glow: 16, 185, 129;
+}
+.themeGreen .iconWrapper {
+  background-color: #10b981;
+  box-shadow: 0 15px 25px -5px rgba(16, 185, 129, 0.4);
+}
+.themeGreen .tryButton {
+  background-color: #10b981;
+}
+.themeGreen .tryButton:hover {
+  background-color: #059669;
+}
+
+/* ================= 3. 紫色主题 ================= */
+.themePurple {
+  background-color: #eef2ff; 
+  --theme-glow: 99, 102, 241;
+}
+.themePurple .iconWrapper {
+  background-color: #6366f1;
+  box-shadow: 0 15px 25px -5px rgba(99, 102, 241, 0.4);
+}
+.themePurple .tryButton {
+  background-color: #6366f1;
+}
+.themePurple .tryButton:hover {
+  background-color: #4f46e5;
+}
+
+/* ================= 4. 橙色主题 ================= */
+.themeOrange {
+  background-color: #fffbeb; 
+  --theme-glow: 245, 158, 11;
+}
+.themeOrange .iconWrapper {
+  background-color: #f59e0b;
+  box-shadow: 0 15px 25px -5px rgba(245, 158, 11, 0.4);
+}
+.themeOrange .tryButton {
+  background-color: #f59e0b;
+}
+.themeOrange .tryButton:hover {
+  background-color: #d97706;
+}
+
+/* ================= 5. 粉红主题 ================= */
+.themePink {
+  background-color: #fff1f2; 
+  --theme-glow: 244, 63, 94;
+}
+.themePink .iconWrapper {
+  background-color: #f43f5e;
+  box-shadow: 0 15px 25px -5px rgba(244, 63, 94, 0.4);
+}
+.themePink .tryButton {
+  background-color: #f43f5e;
+}
+.themePink .tryButton:hover {
+  background-color: #e11d48;
+}
+
+/* ================= 6. 深黑主题 ================= */
+.themeDark {
+  background-color: #f1f5f9; 
+  --theme-glow: 51, 65, 85;
+}
+.themeDark .iconWrapper {
+  background-color: #334155;
+  box-shadow: 0 15px 25px -5px rgba(51, 65, 85, 0.4);
+}
+.themeDark .tryButton {
+  background-color: #334155;
+}
+.themeDark .tryButton:hover {
+  background-color: #1e293b;
+}

@@ -1,0 +1,139 @@
+/* 🌟 新增 1：页面主外壳与弹性布局 */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f7fa; 
+  color: #111827;      
+}
+
+/* 🌟 新增 2：强行解除 App.css 给公用组件加的绝对定位 */
+.page :global(.topNavContainer),
+.page :global(.footerContainer) {
+  position: static !important;
+}
+
+/* 🌟 新增 3：头部与底部隔离区 */
+.header-zone {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.footer-zone {
+  width: 100%;
+  flex-shrink: 0;
+  margin-top: auto; 
+}
+
+/* 🌟 优化：主内容区作为弹性盒子的主体，删掉 calc 硬计算 */
+.analysis-page-container {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+
+.analysis-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  min-height: calc(100vh - 350px); /* 减去 Header 和 Footer 的高度，确保内容区够长 */
+}
+
+/* 顶部标题区样式 */
+.analysis-page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 标题居中 */
+  position: relative;
+  margin-bottom: 48px;
+}
+
+/* ----- 修复 Skill Mastery 组件在窄侧边栏中的挤压 Bug ----- */
+
+/* 1. 将 3 列强制改为 1 列垂直排列 */
+.analysis-sidebar .skills-grid {
+  grid-template-columns: 1fr; 
+  gap: 24px; /* 调整上下技能条的间距 */
+}
+
+/* 2. 微调文字和进度条的间距，使其更贴近截图设计 */
+.analysis-sidebar .skill-item {
+  gap: 8px; 
+}
+
+/* 3. 确保文字和百分比数字在同一行两端对齐，且不换行 */
+.analysis-sidebar .skill-name {
+  font-size: 13px;
+  white-space: nowrap; /* 防止文字换行 */
+}
+
+/* 4. （可选）如果你希望进度条颜色更贴近原图的深绿色，可以加上这行覆盖渐变色 */
+.analysis-sidebar .progress-fill.green {
+  background: #1f7a6d; /* 使用你们系统的主题色 */
+}
+
+.back-link {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #1f7a6d;
+}
+
+.main-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  text-align: center;
+}
+
+/* 布局网格：左窄（340px） 右宽（1fr） */
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* 左侧栏包裹器，让两个卡片上下排列并保持间距 */
+.analysis-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.analysis-main-content {
+  width: 100%;
+}
+
+/* 响应式设计：屏幕变窄时改为上下单列排列 */
+@media (max-width: 992px) {
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .back-link {
+    position: static;
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .analysis-page-header {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

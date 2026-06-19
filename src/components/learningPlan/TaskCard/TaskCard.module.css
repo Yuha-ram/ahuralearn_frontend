@@ -1,0 +1,176 @@
+.taskItem {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.25s;
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, 0.08),
+    0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.taskItem:hover {
+  transform: translateY(-2px);
+}
+
+.active {
+  border-left: 6px solid #ff5b00;
+  box-shadow:
+    0 14px 34px rgba(255, 91, 0, 0.12),
+    0 4px 10px rgba(15, 23, 42, 0.05);
+}
+
+.finished {
+  opacity: 0.55;
+}
+
+.taskLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+
+.taskCheck {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background: #e2e8f0;
+  border: none;
+  cursor: pointer;
+  flex: 0 0 auto;
+  position: relative;
+  transition: 0.2s;
+}
+
+.taskCheck:hover {
+  transform: scale(1.08);
+  background: #cbd5e1;
+}
+
+.done {
+  background: linear-gradient(135deg, #fed7aa, #fdba74);
+}
+
+.done::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid #9a3412;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.taskLeft h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.taskLeft p {
+  margin-top: 8px;
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+.manualMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.manualMeta span {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.priorityHigh {
+  background: #fee2e2 !important;
+  color: #dc2626 !important;
+}
+
+.priorityMedium {
+  background: #ffedd5 !important;
+  color: #ea580c !important;
+}
+
+.priorityLow {
+  background: #dcfce7 !important;
+  color: #16a34a !important;
+}
+
+.taskTags {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-tag {
+  background: #ea580c;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.priority-tag {
+  color: #f97316;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dueText {
+  color: #f97316;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.taskGray {
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+.taskRight {
+  display: grid;
+  justify-items: end;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+.taskActions {
+  display: flex;
+  gap: 8px;
+}
+
+.taskActions button {
+  border: none;
+  border-radius: 999px;
+  padding: 7px 12px;
+  background: #f1f5f9;
+  color: #475569;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.taskActions button:hover {
+  background: #f97316;
+  color: #ffffff;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,142 @@
+.section {
+  background: white;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.viewAll {
+  color: #ff5b00;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.courseCard {
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 16px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.courseCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.courseTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.courseTop h3 {
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.status {
+  background: #ffe7d6;
+  color: #ff5b00;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progressFill {
+  width: var(--progress-target);
+  height: 100%;
+  background: #ff5b00;
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: fillProgressBar 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.courseBottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.statCard {
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.statCard h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff5b00;
+  margin-bottom: 6px;
+}
+
+.statCard p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+@keyframes fillProgressBar {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progressFill {
+    animation: none;
+    transform: scaleX(1);
+  }
+}

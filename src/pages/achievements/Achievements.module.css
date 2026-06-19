@@ -1,0 +1,11 @@
+.achievementsPage {
+  min-height: 100vh;
+  padding: 72px 38px 110px;
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0) 40%
+    ),
+    linear-gradient(180deg, #dfe9f7 0%, #d4e2f5 100%);
+}

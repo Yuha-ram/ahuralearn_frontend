@@ -1,0 +1,17 @@
+.coursesPage {
+  padding: 24px 32px;
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0) 40%
+    ),
+    linear-gradient(180deg, #dfe9f7 0%, #d4e2f5 100%);
+}
+
+.coursesLayout {
+  display: grid;
+  grid-template-columns: 1.7fr 0.7fr;
+  gap: 28px;
+  align-items: start;
+}

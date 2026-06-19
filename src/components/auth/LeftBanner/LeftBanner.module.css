@@ -1,0 +1,56 @@
+.bannerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 100vh;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #368261; /* 底侧依然保持这个深绿色 */
+}
+
+.bannerBackgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* 【修改点 1】：专门控制图片的透明度！0.0 是完全透明(看不见)，1.0是不透明。这里给 0.15 呈现隐隐约约的感觉 */
+  opacity: 0.6; 
+  /* 【修改点 2】：依然保留正片叠底，让图片暗部和我们的绿底色融合更好 */
+  mix-blend-mode: multiply; 
+  z-index: 1; /* 保证这层处于文字下方 */
+}
+
+.bannerTitleWrapper {
+  position: relative; /* 【修改点 3】增加 relative，让下面的 z-index 的 10 能够生效 */
+  z-index: 10;
+  max-width: 38rem; /* 稍微增加宽度防止换行被挤压 */
+  margin-left: 8%; /* 【修改点3】：让文字整体往右侧移动一点 */
+}
+
+.bannerTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.bannerDescription {
+  color: #f0fdf4;
+  font-size: 1.125rem;
+  line-height: 1.625;
+}
+
+@media (max-width: 768px) {
+  .bannerWrapper {
+    display: none;
+  }
+}

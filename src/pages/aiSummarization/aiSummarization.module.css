@@ -1,0 +1,97 @@
+.pageWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+}
+
+.pageContainer {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 4rem;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+}
+
+.backButton:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.crumbActive {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.fileSelect {
+  margin-left: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #0f172a;
+  background-color: #ffffff;
+  cursor: pointer;
+  max-width: 280px;
+}
+
+.singleFile {
+  margin-left: auto;
+  font-size: 0.875rem;
+  color: #475569;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.emptyState {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #64748b;
+}

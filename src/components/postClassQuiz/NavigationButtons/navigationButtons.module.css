@@ -1,0 +1,53 @@
+.buttonsContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.secondaryBtn {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: #0b5edd;
+  border: 1px solid #0b5edd;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondaryBtn:hover {
+  background-color: #f0f6ff;
+}
+
+.primaryBtn {
+  padding: 0.75rem 1.5rem;
+  background-color: #0b5edd;
+  color: #ffffff;
+  border: 1px solid #0b5edd;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.primaryBtn:hover {
+  background-color: #084eb8;
+}
+
+/* .finishBtn {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.finishBtn:hover {
+  background-color: #059669;
+} */

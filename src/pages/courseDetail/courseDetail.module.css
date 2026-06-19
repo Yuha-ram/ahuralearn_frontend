@@ -1,0 +1,62 @@
+.courseDetailContainer {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.courseMainContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem;
+  padding-bottom: 4rem; /* Moved padding here from courseDetailContainer to ensure spacing before footer */
+  flex: 1;
+}
+
+.mainRightColumn {
+  align-self: flex-start;
+  margin-top: 4rem;
+  transform: translateX(60px); /* 教师卡片整体向右平移，避免卡片被过分挤压压缩宽高 */
+}
+
+/* 页面中间的加载和错误状态 */
+.loadingWrapper,
+.errorWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+.errorWrapper {
+  color: #dc2626;
+}
+
+.loadingState {
+  opacity: 0.6;
+  pointer-events: none;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 992px) {
+  .courseMainContent {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+}

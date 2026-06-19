@@ -1,0 +1,163 @@
+.syllabusContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.syllabusTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordionItem {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.accordionItem:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.accordionItem.expanded {
+  border-color: #93c5fd; /* 展开时高亮蓝色边框 */
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.accordionLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.weekNumberCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.accordionTitleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.accordionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.accordionSummary {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.accordionRight {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+}
+
+.chevronIcon {
+  transition: color 0.2s ease;
+}
+
+.accordionItem:hover .chevronIcon {
+  color: #64748b;
+}
+
+.accordionBody {
+  padding: 0 1.5rem 1.5rem 4.25rem; /* 左侧缩进，与标题对齐 */
+  border-top: 1px solid #f1f5f9;
+  margin-top: -0.5rem;
+  padding-top: 1rem;
+}
+
+.placeholderText {
+  color: #475569;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.sectionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sectionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.75rem;
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+}
+
+.sectionLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sectionIcon {
+  color: #94a3b8;
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
+}
+
+.sectionTitle {
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.sectionDuration {
+  font-size: 0.85rem;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .accordionHeader {
+    padding: 1rem;
+  }
+  .accordionLeft {
+    gap: 1rem;
+  }
+  .accordionBody {
+    padding: 0 1rem 1rem 3.5rem;
+  }
+}

@@ -1,0 +1,78 @@
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background-color: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #0f172a;
+  background-color: #f8fafc;
+  resize: vertical;
+  outline: none;
+}
+
+.textarea:focus {
+  border-color: #cbd5e1;
+  background-color: #ffffff;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.18s;
+}
+
+.submitButton:hover {
+  background-color: #1d4ed8;
+}
+
+.submitButton:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}

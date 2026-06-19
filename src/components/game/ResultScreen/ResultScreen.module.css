@@ -1,0 +1,140 @@
+.resultScreen {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(20, 184, 166, 0.16),
+      transparent 35%
+    ),
+    #020617;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.resultCard {
+  width: 760px;
+
+  border-radius: 28px;
+
+  padding: 48px;
+
+  background: rgba(15, 23, 42, 0.9);
+
+  border: 1px solid rgba(45, 212, 191, 0.25);
+
+  box-shadow:
+    0 0 50px rgba(45, 212, 191, 0.18);
+
+  text-align: center;
+}
+
+.resultLabel {
+  color: #facc15;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+.resultCard h1 {
+  font-size: 52px;
+
+  color: #22d3ee;
+
+  margin-bottom: 18px;
+}
+
+.resultText {
+  color: #94a3b8;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  margin-bottom: 36px;
+}
+
+.resultStats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 36px;
+}
+
+.resultStat {
+  padding: 24px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.resultStat span {
+  display: block;
+
+  color: #94a3b8;
+
+  margin-bottom: 10px;
+}
+
+.resultStat strong {
+  font-size: 34px;
+
+  color: white;
+}
+
+.resultButtons {
+  display: flex;
+
+  gap: 18px;
+
+  margin-top: 32px;
+}
+
+.restartBtn,
+.menuBtn {
+  flex: 1;
+
+  height: 58px;
+
+  border: none;
+  border-radius: 18px;
+
+  font-size: 16px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.24s;
+}
+
+.restartBtn {
+  background: #22d3ee;
+
+  color: #07111f;
+}
+
+.menuBtn {
+  background: rgba(250, 204, 21, 0.12);
+
+  color: #fde68a;
+
+  border: 1px solid rgba(250, 204, 21, 0.3);
+}
+
+.restartBtn:hover,
+.menuBtn:hover {
+  transform: translateY(-3px);
+}

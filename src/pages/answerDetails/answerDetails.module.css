@@ -1,0 +1,111 @@
+/* 🌟 新增 1：页面主外壳与弹性布局 */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f7fa; 
+  color: #111827;      
+}
+
+/* 🌟 新增 2：强行解除 App.css 给公用组件加的绝对定位 */
+.page :global(.topNavContainer),
+.page :global(.footerContainer) {
+  position: static !important;
+}
+
+/* 🌟 新增 3：头部与底部隔离区 */
+.header-zone {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.footer-zone {
+  width: 100%;
+  margin-top: auto; 
+}
+
+/* 🌟 新增 4：提取 JSX 中的 main 内联样式 */
+.details-main {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.back-btn:hover {
+  color: #0b5edd;
+  text-decoration: underline;
+}
+
+.print-btn {
+  background: #0b5edd;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.print-btn:hover {
+  background: #0a4fba;
+}
+
+
+/* 高亮闪烁动画（针对锚点跳转） */
+@keyframes flash {
+  0% { background-color: #fef08a; }
+  100% { background-color: white; }
+}
+
+.highlight-flash {
+  animation: flash 2s ease-out forwards;
+}
+
+/* 打印控制逻辑 */
+.print-only-header {
+  display: none;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only-header {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 1rem;
+  }
+  .page {
+    background: white;
+  }
+}

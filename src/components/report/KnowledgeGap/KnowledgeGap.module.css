@@ -1,0 +1,321 @@
+.knowledgeCard {
+  background: white;
+
+  border-radius: 28px;
+
+  padding: 32px;
+
+  min-height: 470px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+/* ===== TITLE ===== */
+
+.knowledgeTitle {
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #0f172a;
+
+  margin-bottom: 10px;
+}
+
+/* ===== WRAPPER ===== */
+
+.radarWrapper {
+  width: 100%;
+  height: 360px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== HEXAGONS ===== */
+
+.hexagon {
+  position: absolute;
+
+  clip-path: polygon(
+    50% 0%,
+    93% 25%,
+    93% 75%,
+    50% 100%,
+    7% 75%,
+    7% 25%
+  );
+
+  border: 1px solid rgba(67, 198, 185, 0.16);
+
+  background: rgba(67, 198, 185, 0.05);
+
+  opacity: 0;
+
+  transform: scale(0.4);
+
+  animation: hexAppear 0.8s ease forwards;
+}
+
+.hex1 {
+  width: 240px;
+  height: 210px;
+
+  animation-delay: 0s;
+}
+
+.hex2 {
+  width: 190px;
+  height: 165px;
+
+  animation-delay: 0.08s;
+}
+
+.hex3 {
+  width: 145px;
+  height: 126px;
+
+  animation-delay: 0.16s;
+}
+
+.hex4 {
+  width: 100px;
+  height: 88px;
+
+  animation-delay: 0.24s;
+}
+
+.hex5 {
+  width: 60px;
+  height: 52px;
+
+  animation-delay: 0.32s;
+}
+
+/* ===== RADAR LINES ===== */
+
+.radarLines {
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+}
+
+.radarLine {
+  position: absolute;
+
+  background: rgba(148, 163, 184, 0.12);
+
+  top: 50%;
+  left: 50%;
+
+  transform-origin: center;
+}
+
+.vertical {
+  width: 1px;
+  height: 210px;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+.diagonalLeft {
+  width: 1px;
+  height: 210px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(60deg);
+}
+
+.diagonalRight {
+  width: 1px;
+  height: 210px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-60deg);
+}
+
+/* ===== DATA SHAPE ===== */
+
+.dataShape {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  background: rgba(67, 198, 185, 0.78);
+
+  clip-path: polygon(
+    50% 0%,
+    90% 28%,
+    78% 88%,
+    50% 100%,
+    18% 70%,
+    5% 30%
+  );
+
+  box-shadow:
+    0 0 30px rgba(67, 198, 185, 0.28);
+
+  transform:
+    scale(0)
+    rotate(-80deg);
+
+  opacity: 0;
+
+  animation:
+    radarAppear 1s ease forwards;
+
+  animation-delay: 0.45s;
+}
+
+/* ===== LABELS ===== */
+
+.label {
+  position: absolute;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #64748b;
+}
+
+.top {
+  top: 40px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.rightTop {
+  top: 110px;
+  left: calc(50% + 100px);
+}
+
+.rightBottom {
+  bottom: 105px;
+  left: calc(50% + 105px);
+}
+
+.bottom {
+  bottom: 40px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.leftBottom {
+  bottom: 105px;
+  right: calc(50% + 105px);
+}
+
+.leftTop {
+  top: 110px;
+  right: calc(50% + 100px);
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes radarAppear {
+  0% {
+    transform:
+      scale(0)
+      rotate(-120deg);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform:
+      scale(var(--shape-scale))
+      rotate(0deg);
+
+    opacity: 1;
+  }
+}
+
+@keyframes hexAppear {
+  0% {
+    opacity: 0;
+
+    transform:
+      scale(0.4);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      scale(1);
+  }
+}
+
+.knowledgeContent {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 28px;
+}
+
+.gapDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gapItem {
+  width: 100%;
+}
+
+.gapHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.gapHeader strong {
+  color: #0f172a;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: #4fd1c5;
+
+  width: 0;
+  animation: progressGrow 1s ease-out forwards;
+}
+
+@keyframes progressGrow {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: var(--target-width);
+  }
+}

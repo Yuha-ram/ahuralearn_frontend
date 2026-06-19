@@ -1,0 +1,142 @@
+.cardContainer {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardContainer:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: #f4f4f5;
+  overflow: hidden;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.cardContainer:hover .coverImage {
+  transform: scale(1.05);
+}
+
+.infoWrapper {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.metaRow {
+  margin-bottom: 0.75rem;
+}
+
+.difficultyBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 1rem;
+}
+
+/* 根据你要求的不用常规蓝紫色，使用翠绿、暖橙和浅色系 */
+.levelBeginner {
+  background-color: #dcfce7; /* 翠绿色 */
+  color: #166534;
+}
+
+.levelIntermediate {
+  background-color: #e0f2fe;  /* 极简淡蓝/青 */
+  color: #0284c7;
+}
+
+.levelAdvanced {
+  background-color: #ffedd5; /* 暖橙色 */
+  color: #c2410c;
+}
+
+.levelDefault {
+  background-color: #f4f4f5;
+  color: #52525b;
+}
+
+.courseTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #18181b;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+  /* 强制两行，超出省略号 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.instructorName {
+  font-size: 0.875rem;
+  color: #52525b;
+  margin: 0 0 1.25rem 0;
+  flex: 1; /* 吸附上面的内容，把评分挤到最下面 */
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.ratingNumber {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #18181b; /* 数字可以用醒目深色 */
+}
+
+.starsWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.starsWrapper svg {
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
+.starsEmpty {
+  display: flex;
+  flex-wrap: nowrap;
+  color: #e4e4e7;
+}
+
+.starsFilled {
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  color: #eab308;
+}
+
+.reviewCount {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+}

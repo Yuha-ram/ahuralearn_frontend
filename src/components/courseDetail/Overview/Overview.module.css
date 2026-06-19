@@ -1,0 +1,64 @@
+.overviewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+}
+
+.aboutText {
+  margin-top: -2rem;
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.7;
+  white-space: pre-line; /* 能够解析数据中的 \n 并在网页上换行 */
+}
+
+.outcomesCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.outcomesTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1.5rem 0;
+}
+
+.outcomesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+}
+
+.outcomeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkIcon {
+  color: #2563eb;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.outcomeText {
+  color: #334155;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .outcomesGrid {
+    grid-template-columns: 1fr;
+  }
+}

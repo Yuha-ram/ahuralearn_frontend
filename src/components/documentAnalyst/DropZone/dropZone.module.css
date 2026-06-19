@@ -1,0 +1,56 @@
+.dropZone {
+  border: 2px dashed #93c5fd;
+  border-radius: 16px;
+  background-color: #eff6ff;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.18s, background-color 0.18s;
+}
+
+.dropZone:hover,
+.dragging {
+  border-color: #2563eb;
+  background-color: #e0ecff;
+}
+
+.iconCircle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #fff7ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem;
+}
+
+.hint {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+.browseButton {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.18s;
+}
+
+.browseButton:hover {
+  background-color: #1d4ed8;
+}

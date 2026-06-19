@@ -1,0 +1,80 @@
+/* 🌟 新增：独立接管卡片样式 */
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 25px 80px rgba(15, 23, 42, 0.08);
+}
+
+/* 🌟 新增：接管小标题样式 */
+.skill-title {
+  margin: 0 0 20px 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+
+
+.skill-mastery {
+  grid-column: 1 / -1;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.skill-percentage {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #f0f2f5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-fill.green {
+  background: linear-gradient(90deg, #4caf50, #66bb6a);
+}
+
+.progress-fill.blue {
+  background: linear-gradient(90deg, #2196f3, #42a5f5);
+}
+
+.progress-fill.orange {
+  background: linear-gradient(90deg, #ff9800, #ffb74d);
+}

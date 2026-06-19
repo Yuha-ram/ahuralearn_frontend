@@ -1,0 +1,151 @@
+.instructionScreen {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(34, 211, 238, 0.18),
+      transparent 35%
+    ),
+    #07111f;
+}
+
+.instructionCard {
+  width: 760px;
+
+  padding: 42px;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.96),
+      rgba(15, 23, 42, 0.82)
+    );
+
+  border: 1px solid rgba(34, 211, 238, 0.24);
+
+  box-shadow:
+    0 0 36px rgba(34, 211, 238, 0.14);
+
+  color: white;
+}
+
+.instructionLabel {
+  color: #facc15;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 16px;
+}
+
+.instructionCard h1 {
+  color: #22d3ee;
+
+  font-size: 52px;
+
+  margin-bottom: 34px;
+
+  text-shadow:
+    0 0 24px rgba(34, 211, 238, 0.32);
+}
+
+.instructionGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+.instructionItem {
+  padding: 24px;
+
+  border-radius: 20px;
+
+  background: rgba(15, 23, 42, 0.74);
+
+  border: 1px solid rgba(34, 211, 238, 0.14);
+}
+
+.instructionItem span {
+  display: block;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  margin-bottom: 12px;
+}
+
+.instructionItem strong {
+  color: white;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+.launchBtn {
+  width: 100%;
+
+  height: 68px;
+
+  margin-top: 34px;
+
+  border: none;
+  border-radius: 20px;
+
+  background: #22d3ee;
+
+  color: #07111f;
+
+  font-size: 18px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.24s;
+}
+
+.launchBtn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 28px rgba(34, 211, 238, 0.42);
+}
+
+.backSelectBtn {
+  width: 100%;
+  height: 54px;
+
+  margin-top: 22px;
+
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  border-radius: 18px;
+
+  background: transparent;
+
+  color: #67e8f9;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.24s;
+}
+
+.backSelectBtn:hover {
+  background: rgba(34, 211, 238, 0.12);
+}

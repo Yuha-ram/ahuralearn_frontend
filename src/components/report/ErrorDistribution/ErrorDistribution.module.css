@@ -1,0 +1,122 @@
+.card {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 22px;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.04);
+}
+
+.card h2 {
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #0f172a;
+
+  text-align: center;
+
+  margin-bottom: 24px;
+}
+
+.errorCard {
+  height: 450px;
+}
+
+/* ===== Pie Chart ===== */
+
+.pieChart {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: 20px;
+  margin-bottom: 26px;
+}
+
+.pie {
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+
+  animation:
+    pieReveal 1.2s ease;
+}
+
+/* ===== Error List ===== */
+
+.errorList {
+  margin-top: 18px;
+}
+
+.errorItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  margin-bottom: 16px;
+}
+
+.errorName {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex: 1;
+
+  line-height: 1.4;
+
+  color: #0f172a;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.errorDot {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  flex-shrink: 0;
+}
+
+.errorItem strong {
+  min-width: 48px;
+
+  text-align: right;
+
+  color: #4b6487;
+
+  font-size: 15px;
+}
+
+/* ===== Animation ===== */
+
+@keyframes pieReveal {
+  0% {
+    transform: scale(0.2) rotate(-180deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.08) rotate(10deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}

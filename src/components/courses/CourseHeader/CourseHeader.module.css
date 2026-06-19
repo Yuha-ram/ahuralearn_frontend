@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 36px;
+}
+
+.header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  margin-right: 500px;
+  top: 80px;
+}
+
+.filters button {
+  border: none;
+  background: white;
+  padding: 12px 22px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  transition: 0.25s;
+}
+
+.filters button:hover {
+  transform: translateY(-2px);
+}
+
+.active {
+  color: #ff5b00 !important;
+}

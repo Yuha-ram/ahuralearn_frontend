@@ -1,0 +1,71 @@
+.cardContainer {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.instructorTitle {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 1.5rem 0;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #f1f5f9;
+}
+
+.nameBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.bio {
+  font-size: 0.9375rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  font-style: italic;
+}
+
+.viewProfileButton {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewProfileButton:hover {
+  background-color: #f8fafc;
+  border-color: #2563eb;
+}

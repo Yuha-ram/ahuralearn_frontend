@@ -1,0 +1,114 @@
+.playerContainer {
+  width: 100%;
+  background-color: #000;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.videoElement {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  cursor: pointer;
+}
+
+/* Custom Controls */
+.controlsWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.playerContainer:hover .controlsWrapper {
+  opacity: 1;
+}
+
+.progressBarContainer {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: #3b82f6; /* Blue progress */
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.progressInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.controlButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  transition: transform 0.1s ease;
+}
+
+.controlButton:hover {
+  transform: scale(1.1);
+}
+
+.timeDisplay {
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.savingIndicator {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  padding: 0 0.5rem;
+}
+
+.savingIndicatorDot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}

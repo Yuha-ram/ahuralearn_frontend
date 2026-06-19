@@ -1,0 +1,35 @@
+.courseTabsWrapper {
+  width: 100%;
+}
+
+.tabsContainer {
+  display: flex;
+  gap: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.tabItem {
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tabItem:hover {
+  color: #0f172a;
+}
+
+.tabItem.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.tabContentArea {
+  min-height: 400px;
+}

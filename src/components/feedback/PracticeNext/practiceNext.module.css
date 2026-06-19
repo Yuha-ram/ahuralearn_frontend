@@ -1,0 +1,107 @@
+/* 🌟 新增：独立接管全局卡片外壳样式 */
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 25px 80px rgba(15, 23, 42, 0.08);
+}
+
+/* 🌟 新增：将 JSX 里杂乱的内联样式提取到这里 */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.subtitle {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.practice-icon {
+  background: #6366f1;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 1.05rem;
+}
+
+.practice-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  display: grid;
+  gap: 10px;
+}
+
+.practice-card:last-child {
+  margin-bottom: 0;
+}
+
+.practice-type {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+  width: fit-content; /* 确保标签不会被网格拉伸 */
+}
+
+.refinement-card .practice-type {
+  background: #f5f3ff;
+  color: #5b21b6;
+}
+
+.practice-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.practice-card p {
+  margin: 12px 0 0;
+  color: #4b5563;
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.practice-card button {
+  width: 100%;
+  border-radius: 14px;
+  background: #4338ca;
+  padding: 14px 18px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.practice-card button:hover {
+  background: #3730a3;
+}

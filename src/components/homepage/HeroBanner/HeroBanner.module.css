@@ -1,0 +1,96 @@
+.bannerContainer {
+  width: 100%;
+  padding: 0; /* 移除内边距，实现真正的占满全屏宽度 */
+  box-sizing: border-box;
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  min-height: 300px;
+  max-height: 600px;
+  border-radius: 0; /* 去掉圆角，实现 Edge-to-edge 的 Full-width Carousel */
+  overflow: hidden;
+  box-shadow: none; /* 全宽 banner 通常不需要盒子阴影 */
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideItem {
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* 底部加上一个渐变遮罩，使图片与页面的底色 (#f1f5f9) 完美融为一体，过渡更自然 */
+.carouselWrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+  background: linear-gradient(to top, #f1f5f9 0%, transparent 100%);
+  pointer-events: none; /* 确保不影响里面 a 标签的点击 */
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.heroArrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent; /* 背景改为透明，融入横幅 */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  z-index: 10;
+  opacity: 0.7; /* 让箭头本身也带有一点透明度 */
+  padding: 1rem; /* 增加内边距，确保图标完整不被裁剪 */
+}
+
+.heroArrowButton:hover {
+  opacity: 1; /* 鼠标悬浮时变得更清晰 */
+}
+
+.heroArrowLeft {
+  left: 0.1rem; /* 确保完全位于横幅内部 */
+}
+
+.heroArrowRight {
+  right: 0.1rem; /* 确保完全位于横幅内部 */
+}
+
+.loadingText, .errorText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f1f5f9;
+  border-radius: 1rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.errorText {
+  color: #dc2626;
+}
+

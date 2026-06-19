@@ -1,0 +1,118 @@
+.pacmanGame {
+  min-height: 620px;
+
+  color: white;
+}
+
+.pacmanHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.pacmanHeader span {
+  color: #22d3ee;
+
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.pacmanHeader strong {
+  color: #facc15;
+
+  font-size: 22px;
+}
+
+.pacmanStats {
+  display: flex;
+
+  gap: 24px;
+}
+
+.pacmanBoard {
+  position: relative;
+
+  height: 500px;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(34, 211, 238, 0.22);
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    ),
+    rgba(15, 23, 42, 0.82);
+
+  background-size: 10% 10%;
+}
+
+.pacmanPlayer {
+  position: absolute;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  background: #22d3ee;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow:
+    0 0 28px rgba(34, 211, 238, 0.75);
+
+  transition: 0.12s linear;
+}
+
+.pacmanFood {
+  position: absolute;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  background: #5eead4;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow:
+    0 0 18px rgba(94, 234, 212, 0.8);
+}
+
+.pacmanEnemy {
+  position: absolute;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 14px;
+
+  background: #fb7185;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow:
+    0 0 24px rgba(251, 113, 133, 0.75);
+}
+
+.pacmanTip {
+  margin-top: 22px;
+
+  text-align: center;
+
+  color: #94a3b8;
+
+  font-weight: 700;
+}

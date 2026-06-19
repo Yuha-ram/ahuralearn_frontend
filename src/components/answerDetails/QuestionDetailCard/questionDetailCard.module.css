@@ -1,0 +1,111 @@
+.detail-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-left: 6px solid #cbd5e1;
+  transition: background-color 0.5s;
+}
+
+.correct-border {
+  border-left-color: #22c55e;
+}
+
+.incorrect-border {
+  border-left-color: #ef4444;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.q-number {
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status-pass {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-fail {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.q-title {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.answer-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.answer-box {
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8fafb;
+  border: 1px solid #e2e8f0;
+}
+
+.answer-box h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.85rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.answer-box p {
+  margin: 0;
+  font-weight: 600;
+  color: #334155;
+}
+
+.user-answer-box {
+  border-left: 4px solid #94a3b8;
+}
+
+.correct-answer-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 4px solid #22c55e;
+}
+
+.ai-explanation {
+  background: #eff6ff;
+  color: #1e3a8a;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  border: 1px solid #bfdbfe;
+}
+
+/* 打印卡片时的专属样式 */
+@media print {
+  .detail-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #e2e8f0;
+    border-left-width: 6px;
+  }
+}

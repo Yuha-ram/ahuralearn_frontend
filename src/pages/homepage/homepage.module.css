@@ -1,0 +1,13 @@
+.homepageContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f5f9; /* 稍微给一个极浅的灰蓝色背景，衬托白色的卡片 */
+}
+
+.homepageMainContent {
+  flex: 1; /* 让主要内容区域撑开，将 Footer 挤到最下面 */
+  width: 100%;
+  max-width: 1600px; /* 大屏下不至于无限制拉伸 */
+  margin: 0 auto;
+}

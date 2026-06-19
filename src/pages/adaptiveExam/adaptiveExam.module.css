@@ -1,0 +1,66 @@
+/* 原examController.module.css */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f7fa; /* 从原 App.css 继承的页面背景色 */
+  color: #111827;      /* 从原 App.css 继承的字体颜色 */
+}
+
+/* 🚀 给 Header 设置隔离区 */
+.header-zone {
+  width: 100%;
+  height: 70px; /* 🌟 改成固定高度，具体数值取决于你 TopNav 的实际高度 */
+  flex-shrink: 0; /* 防止被弹性盒子压缩 */
+}
+
+/* 🚀 给 Footer 设置隔离区 */
+.footer-zone {
+  position: relative;
+  width: 100%;
+  margin-top: auto;  /* 🌟 最强吸底魔法：自动把剩余空间推向顶部，将 Footer 压入最底 */
+}
+
+.main-grid {
+  flex: 1 0 auto; /* 允许中间区域自动伸展撑开页面 */
+  display: grid;
+  gap: 32px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 420px);
+  max-width: 1440px; 
+  margin: 0 auto; 
+  padding: 24px;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08); 
+  grid-column: 1;
+  min-width: 0; 
+  overflow: hidden; 
+  align-self: start; /* 🌟 新增这一行：让卡片高度只由题目内容决定，绝不拉伸 */
+}
+
+.panel-secondary {
+  display: grid;
+  gap: 22px;
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  grid-column: 2;
+}
+
+.progress-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+.progress-value { font-size: 0.95rem; font-weight: 700; color: #1f7a6d; }
+.progress-bar { position: relative; width: 100%; height: 10px; border-radius: 999px; background: #e9f2f5; overflow: hidden; margin-bottom: 24px; }
+.progress-bar span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #1f7a6d 0%, #3fb69f 100%); }
+.status-pill { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; background: rgba(31, 122, 109, 0.12); color: #1f7a6d; font-size: 0.95rem; font-weight: 700; width: fit-content; margin-bottom: 24px; }
+.btn-row { display: flex; justify-content: space-between; align-items: center; margin-top: 28px; gap: 12px; flex-wrap: wrap; }
+.cta-button { font: inherit; cursor: pointer; border: none; background: linear-gradient(135deg, #1f7a6d, #3fb69f); color: white; padding: 14px 26px; border-radius: 14px; box-shadow: 0 18px 32px rgba(31, 122, 109, 0.18); }
+.hint-link { font: inherit; cursor: pointer; background: none; border: none; color: #6b7280; font-size: 0.95rem; }
+
+/* 响应式 */
+@media (max-width: 1130px) { .main-grid { grid-template-columns: 1fr; } }
+@media (max-width: 800px) { .main-grid { grid-template-columns: 1fr; } .panel-secondary { position: relative; top: auto; grid-column: 1; } }

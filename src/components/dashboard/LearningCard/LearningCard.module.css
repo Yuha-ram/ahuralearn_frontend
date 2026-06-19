@@ -1,0 +1,50 @@
+.card {
+  background: white;
+  border-radius: 28px;
+  padding: 48px;
+  min-height: 460px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover :global([class*="progressCircle"]) {
+  transform: scale(1.03);
+}
+
+.card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.ringSlot {
+  align-self: center;
+  margin-bottom: 28px;
+}
+
+.progressText {
+  text-align: center;
+  align-self: center;
+}
+
+.progressText h3 {
+  color: #10b981;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.progressText p {
+  color: #94a3b8;
+  font-size: 14px;
+}

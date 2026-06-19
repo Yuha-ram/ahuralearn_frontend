@@ -1,0 +1,115 @@
+.panelContainer {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.percentage {
+  font-size: 1rem;
+  color: #0b5edd;
+  font-weight: 700;
+}
+
+.progressBarTrack {
+  height: 6px;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: #0b5edd;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.questionsCount {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.matrixContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.numberBox {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #64748b;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+  background-color: #ffffff;
+}
+
+.numberBox:hover {
+  border-color: #94a3b8;
+}
+
+.boxActive {
+  border-color: #0b5edd;
+  color: #0b5edd;
+  border-width: 2px;
+}
+
+.boxAnswered {
+  background-color: #f0f6ff;
+  border-color: #0b5edd;
+  color: #0b5edd;
+}
+
+.flagIcon {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.submitAction {
+  display: flex;
+  justify-content: center;
+}
+
+.submitButton {
+  background: none;
+  border: none;
+  color: #0b5edd;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  text-decoration: underline;
+}

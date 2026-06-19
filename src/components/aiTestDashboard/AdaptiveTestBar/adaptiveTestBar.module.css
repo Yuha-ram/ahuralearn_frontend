@@ -1,0 +1,65 @@
+.test-ready {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 380px;
+}
+
+/* 🌟 新增：独立接管原本属于 App.css 的 h3 标题样式 */
+.test-ready h3 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  color: #111827; /* 替代 var(--text) */
+  font-weight: 700;
+}
+
+/* 🌟 新增：独立接管原本属于 App.css 的 p 段落文字样式 */
+.test-ready p {
+  margin: 0 0 24px;
+  color: #6b7280; /* 替代 var(--muted) */
+  font-size: 0.95rem;
+  max-width: 420px; 
+  line-height: 1.5;
+}
+
+.test-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff6b6b, #ff8787);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  font-size: 32px;
+}
+
+.btn-test {
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+  color: white;
+  padding: 12px 40px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit; /* 🌟 新增：防止失去 App.css 后按钮字体变丑 */
+  cursor: pointer;      /* 🌟 新增：确保鼠标悬浮呈现小手 */
+}
+
+.btn-test:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
+}
+
+.btn-test:active {
+  transform: translateY(0);
+}
+
+.estimate-text {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #9ca3af;
+}

@@ -1,0 +1,137 @@
+.goalItem {
+  min-height: 92px;
+  padding: 18px 20px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(49, 67, 94, 0.14);
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.active {
+  box-shadow: 0 14px 26px rgba(49, 67, 94, 0.18);
+}
+
+.muted {
+  color: #98a2b5;
+}
+
+.goalHeader {
+  min-width: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.goalHeader h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.muted .goalHeader h3 {
+  color: #98a2b5;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.metaRow span {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.checkBox {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #e6edf7, #ffffff);
+  box-shadow: 0 4px 12px rgba(94, 113, 141, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.checkBox:disabled {
+  cursor: default;
+}
+
+.achieved {
+  background: #f25a16;
+  box-shadow: none;
+}
+
+.progressRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 12px;
+}
+
+.progressRow strong {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: right;
+}
+
+.goalActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.goalActions button {
+  min-height: 30px;
+  border: none;
+  border-radius: 999px;
+  padding: 0 11px;
+  background: #f7f9fd;
+  color: #475569;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 900;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.goalActions button:hover {
+  background: #f25a16;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 760px) {
+  .titleRow {
+    display: grid;
+  }
+
+  .goalActions {
+    justify-content: flex-start;
+  }
+}

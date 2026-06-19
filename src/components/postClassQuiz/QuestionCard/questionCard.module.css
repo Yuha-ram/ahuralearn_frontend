@@ -1,0 +1,134 @@
+.cardContainer {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.questionBadge {
+  background-color: #d2d7de;
+  color: #475569;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+}
+
+.bookmarkButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.bookmarkButton:hover {
+  color: #0f172a;
+}
+
+.bookmarkActive {
+  color: #0b5edd;
+}
+
+.questionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 2.5rem;
+  line-height: 1.4;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #ffffff;
+}
+
+.optionItem:hover {
+  border-color: #94a3b8;
+}
+
+.optionSelected {
+  border-color: #0b5edd;
+  background-color: #f0f6ff;
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioVirtual {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+  margin-right: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+}
+
+.radioVirtualInner {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #0b5edd;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+
+.optionSelected .radioVirtual {
+  border-color: #0b5edd;
+}
+
+.optionSelected .radioVirtualInner {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.optionText {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #334155;
+  flex: 1;
+}
+
+.selectedIcon {
+  color: #0b5edd;
+  margin-left: auto;
+}
+
+.footerActions {
+  margin-top: auto;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}

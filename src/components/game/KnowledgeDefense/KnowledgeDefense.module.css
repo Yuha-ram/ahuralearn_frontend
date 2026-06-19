@@ -1,0 +1,221 @@
+.knowledgeDefense {
+  min-height: 620px;
+  color: white;
+}
+
+.defenseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.defenseHeader span {
+  color: #22d3ee;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.defenseStats {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.defenseStats strong {
+  color: #facc15;
+  font-size: 17px;
+}
+
+.defenseArena {
+  height: 430px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(34, 211, 238, 0.22);
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(34, 211, 238, 0.1),
+      transparent 45%
+    ),
+    rgba(15, 23, 42, 0.88);
+  background-size: 38px 38px, 38px 38px, auto, auto;
+  box-shadow: 0 0 32px rgba(34, 211, 238, 0.12);
+}
+
+.baseZone {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 140px;
+  height: 260px;
+
+  border-radius: 22px;
+  border: 2px solid rgba(20, 184, 166, 0.7);
+
+  background: rgba(20, 184, 166, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 0 28px rgba(20, 184, 166, 0.24),
+    inset 0 0 24px rgba(20, 184, 166, 0.14);
+}
+
+.baseZone span {
+  color: #5eead4;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.defenseLine {
+  position: absolute;
+  left: 190px;
+  top: 0;
+
+  width: 2px;
+  height: 100%;
+
+  background: rgba(251, 113, 133, 0.5);
+
+  box-shadow: 0 0 18px rgba(251, 113, 133, 0.7);
+}
+
+.enemyConcept {
+  position: absolute;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  min-width: 190px;
+
+  padding: 22px 28px;
+
+  border-radius: 22px;
+
+  background: #020617;
+
+  border: 1px solid rgba(34, 211, 238, 0.45);
+
+  color: #67e8f9;
+
+  font-size: 26px;
+  font-weight: 900;
+
+  text-align: center;
+
+  box-shadow:
+    0 0 30px rgba(34, 211, 238, 0.3),
+    inset 0 0 18px rgba(34, 211, 238, 0.08);
+
+  transition: left 0.45s linear;
+}
+
+.correctFeedback,
+.wrongFeedback {
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+
+  transform: translateX(-50%);
+
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.correctFeedback {
+  color: #5eead4;
+}
+
+.wrongFeedback {
+  color: #fb7185;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-top: 24px;
+}
+
+.categoryGrid button {
+  height: 64px;
+
+  border: 1px solid rgba(34, 211, 238, 0.26);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.96),
+      rgba(15, 23, 42, 0.76)
+    );
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.24s;
+
+  box-shadow:
+    0 0 18px rgba(34, 211, 238, 0.08);
+}
+
+.categoryGrid button span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  margin-right: 10px;
+
+  border-radius: 8px;
+
+  background: #22d3ee;
+  color: #07111f;
+
+  font-weight: 900;
+}
+
+.categoryGrid button:hover {
+  transform: translateY(-4px);
+
+  border-color: #22d3ee;
+
+  box-shadow:
+    0 0 28px rgba(34, 211, 238, 0.3);
+}
+
+.defenseLegend {
+  margin-top: 20px;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  text-align: center;
+}

@@ -1,0 +1,106 @@
+/* 🌟 1. 页面主外壳与弹性布局 */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f7fa; 
+  color: #111827;      
+}
+
+/* 🌟 2. 强行解除 App.css 给公用组件加的绝对定位 */
+.page :global(.topNavContainer),
+.page :global(.footerContainer) {
+  position: static !important;
+}
+
+/* 🌟 3. 头部与底部隔离区 */
+.header-zone {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.footer-zone {
+  width: 100%;
+  margin-top: auto; 
+}
+
+/* 🌟 4. 主内容区容器 */
+.container {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+  box-sizing: border-box;
+}
+
+/* 🌟 5. 提取 JSX 中的 Hero 区域内联样式 */
+.hero {
+  display: grid;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.hero-title {
+  margin: 0 0 12px 0;
+  font-size: 2rem;
+  color: #111827;
+  font-weight: 700;
+}
+
+.hero-desc {
+  margin: 0;
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+/* 🌟 6. 提取 JSX 中的网格布局 */
+.main-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 340px; /* 左宽右窄的经典结构 */
+  align-items: start;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 🌟 7. 使用纯 CSS 接管复杂的 JS 悬浮特效 */
+.back-dashboard-wrapper {
+  padding: 0 8px;
+  margin-top: 4px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  color: #1f7a6d; /* 悬浮时变为系统主题绿 */
+  transform: translateX(-2px);
+}
+
+/* 响应式：屏幕变小自动切换为单列 */
+@media (max-width: 992px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}

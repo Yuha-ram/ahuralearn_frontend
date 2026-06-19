@@ -1,0 +1,72 @@
+/* 🌟 新增：页面主外壳，使用弹性盒子确保 Footer 吸底 */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f7fa; /* 继承 App.css 的背景色 */
+  color: #111827;      /* 继承 App.css 的文字颜色 */
+}
+
+/* 🌟强行解除 App.css 给公用组件加的绝对定位，变为普通元素 */
+.page :global(.topNavContainer),
+.page :global(.footerContainer) {
+  position: static !important;
+}
+
+
+/* 🚀 给 Header 设置隔离区 */
+.header-zone {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* 🚀 给 Footer 设置隔离区 */
+.footer-zone {
+  width: 100%;
+  margin-top: auto;  /* 🌟 最强吸底魔法 */
+}
+
+/* 🌟 修改：中间的主内容区容器，限制最大宽度并居中 */
+.container {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  box-sizing: border-box;
+}
+
+
+.header-section {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.header-description {
+  font-size: 15px;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.content-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 32px;
+}
+
+/* 🌟 新增：移动端响应式，屏幕变窄时卡片上下堆叠 */
+@media (max-width: 800px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}

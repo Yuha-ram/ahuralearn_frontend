@@ -1,0 +1,173 @@
+.scoreCircle {
+  --score-angle: 0deg;
+  --animated-score-angle: 0deg;
+}
+
+@property --animated-score-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.resultCard {
+  width: 100%;
+  min-height: 245px;
+  padding: 46px 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 42px;
+
+  background: #f8fbff;
+  border-radius: 22px;
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
+}
+
+.scoreCircle {
+  width: 150px;
+  height: 150px;
+  flex: 0 0 150px;
+
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, #f8fbff 58%, transparent 59%),
+    conic-gradient(
+      #ff5b00 0deg var(--animated-score-angle),
+      #dbe3ef var(--animated-score-angle) 360deg
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fillScoreCircle 1100ms ease-out forwards;
+}
+
+.scoreCircle div {
+  text-align: center;
+}
+
+.scoreCircle strong {
+  font-size: 38px;
+  font-weight: 800;
+  color: #172b4d;
+}
+
+.scoreCircle span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.scoreCircle p {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #94a3b8;
+}
+
+.content {
+  max-width: 620px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.badge {
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: #d1fae5;
+  color: #059669;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.titleRow h1 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.description {
+  margin: 18px 0 28px;
+  max-width: 560px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.primaryButton,
+.secondaryButton {
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  border-radius: 999px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-1px);
+}
+
+.primaryButton {
+  padding: 13px 25px;
+  background: #ff5b00;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(255, 91, 0, 0.35);
+}
+
+.secondaryButton {
+  padding: 13px 25px;
+  background: #ffffff;
+  color: #475569;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.downloadedButton {
+  background: #059669;
+  box-shadow: 0 10px 24px rgba(5, 150, 105, 0.28);
+}
+
+.sharedButton {
+  background: #172b4d;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(23, 43, 77, 0.22);
+}
+
+.failedButton {
+  background: #fee2e2;
+  color: #dc2626;
+  box-shadow: 0 10px 24px rgba(220, 38, 38, 0.16);
+}
+
+@keyframes fillScoreCircle {
+  from {
+    --animated-score-angle: 0deg;
+  }
+
+  to {
+    --animated-score-angle: var(--score-angle);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scoreCircle {
+    --animated-score-angle: var(--score-angle);
+    animation: none;
+  }
+}

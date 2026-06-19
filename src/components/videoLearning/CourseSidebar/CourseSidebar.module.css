@@ -1,0 +1,203 @@
+.sidebarContainer {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.headerTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+}
+
+.progressInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  font-weight: 750;
+}
+
+.progressInfo > span:nth-child(2) {
+  color: #2563eb;
+}
+
+.progressBarContainer {
+  height: 12px;
+  background-color: #f1f5f9;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #10b981;
+  transition: width 0.5s ease-in-out;
+}
+
+.lessonListContainer {
+  display: flex;
+  flex-direction: column;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.chapterBlock {
+  border-bottom: 1px solid #e2e8f0;
+}
+.chapterBlock:last-child {
+  border-bottom: none;
+}
+
+.chapterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #f8fafc;
+  cursor: pointer;
+  user-select: none;
+}
+
+.chapterHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0f172a;
+}
+
+.chapterTitle {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.chapterMeta {
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+.chapterSections {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 根据课时的 4 种状态定义不同的样式 */
+.lessonItem {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.lessonItem:last-child {
+  border-bottom: none;
+}
+
+/* 状态修饰类 */
+.completed {
+  cursor: pointer;
+}
+.completed:hover {
+  background-color: #f8fafc;
+}
+
+.unlocked {
+  cursor: pointer;
+}
+.unlocked:hover {
+  background-color: #f8fafc;
+}
+
+.nowPlaying {
+  background-color: #eff6ff; /* 微蓝底色 */
+  border-left: 3px solid #3b82f6; /* 左侧边框高亮 */
+  padding-left: calc(1.5rem - 3px);
+}
+
+.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Icon 区域 */
+.iconWrapper {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.iconCompleted {
+  background-color: #d1fae5;
+  color: #10b981;
+}
+
+.iconNowPlaying {
+  background-color: #dbeafe;
+  color: #3b82f6;
+  animation: pulseBlue 2s infinite;
+}
+
+.iconUnlocked {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.iconLocked {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+}
+
+@keyframes pulseBlue {
+  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+}
+
+/* 内容区域 */
+.lessonContent {
+  flex: 1;
+}
+
+.lessonTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.4;
+}
+
+.darkText {
+  color: #0f172a;
+}
+
+.lightText {
+  color: #64748b;
+}
+
+.lessonMeta {
+  font-size: 0.8125rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.nowPlayingText {
+  color: #3b82f6;
+  font-weight: 500;
+}

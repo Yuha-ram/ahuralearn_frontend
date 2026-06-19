@@ -1,0 +1,86 @@
+.aiCard {
+  margin-top: 28px;
+
+  background: linear-gradient(
+    135deg,
+    #0fa38d,
+    #0b8e84
+  );
+
+  border-radius: 28px;
+
+  padding: 34px 38px;
+
+  color: white;
+
+  box-shadow:
+    0 20px 40px rgba(15,163,141,0.22);
+
+  transition: 0.3s;
+}
+
+.aiCard:hover {
+  transform: translateY(-4px);
+}
+
+.aiHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 24px;
+}
+
+.aiIcon {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.14);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+.aiHeader h3 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.aiText {
+  font-size: 18px;
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.9);
+
+  max-width: 820px;
+
+  margin-bottom: 32px;
+}
+
+.aiBtn {
+  border: none;
+
+  background: white;
+
+  color: #0b8e84;
+
+  padding: 16px 34px;
+
+  border-radius: 16px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.aiBtn:hover {
+  transform: scale(1.05);
+}

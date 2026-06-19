@@ -1,0 +1,75 @@
+.instructorCardBox {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  position: static;
+}
+
+.instructorMainTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1.5rem 0;
+}
+
+.instructorProfileArea {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.largeAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e2e8f0;
+}
+
+.instructorNameBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.instructorDetailName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.instructorBio {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.instructorStatsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #334155;
+}
+
+.statIcon {
+  color: #64748b;
+}
+
+.statText {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .instructorCardBox {
+    position: static; /* 移动端时不使用 sticky */
+  }
+}

@@ -1,0 +1,332 @@
+.weeklyGoals {
+  margin-top: 44px;
+  padding: 38px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 18px 32px rgba(45, 64, 93, 0.16);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: #8da0bd;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: #f7f9fd;
+  color: #f25a16;
+  box-shadow: 0 6px 12px rgba(62, 80, 110, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.formPanel {
+  margin-bottom: 24px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #f7f9fd;
+  box-shadow: inset 0 0 0 1px rgba(141, 160, 189, 0.18);
+}
+
+.formPanel form {
+  display: grid;
+  gap: 16px;
+}
+
+.formHeader h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.formHeader p {
+  margin: 6px 0 0;
+  color: #8da0bd;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) repeat(4, minmax(120px, 0.45fr));
+  gap: 14px;
+}
+
+.titleField {
+  min-width: 0;
+}
+
+.formPanel label {
+  display: grid;
+  gap: 8px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.formPanel input,
+.formPanel select {
+  width: 100%;
+  border: 1px solid #d7dfec;
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #0f172a;
+  font: inherit;
+  font-weight: 700;
+  background: #ffffff;
+  outline: none;
+}
+
+.formPanel input:focus,
+.formPanel select:focus {
+  border-color: #f25a16;
+  box-shadow: 0 0 0 3px rgba(242, 90, 22, 0.14);
+}
+
+.formError {
+  margin: 0;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.formActions button {
+  min-width: 92px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.formActions button:first-child {
+  background: #ffffff;
+  color: #64748b;
+}
+
+.formActions button:last-child {
+  background: #f25a16;
+  color: #ffffff;
+}
+
+.formActions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.goalList {
+  display: grid;
+  gap: 20px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.pagination p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.pageControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pageControls button {
+  min-width: 40px;
+  height: 36px;
+  border: none;
+  border-radius: 999px;
+  padding: 0 13px;
+  background: #f1f5f9;
+  color: #475569;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 900;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pageControls button:hover:not(:disabled) {
+  background: #f25a16;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.pageControls button:disabled {
+  color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.pageControls .activePage {
+  background: #f25a16;
+  color: #ffffff;
+}
+
+.dialogBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.36);
+  backdrop-filter: blur(4px);
+}
+
+.confirmDialog {
+  position: relative;
+  width: min(420px, 100%);
+  padding: 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28);
+}
+
+.dialogClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialogClose:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.dialogIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  margin: 0 auto;
+  background: #fff7ed;
+  color: #f25a16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmDialog h3 {
+  margin: 18px 0 8px;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.confirmDialog p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.dialogActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.dialogActions button {
+  min-width: 96px;
+  border: none;
+  border-radius: 12px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+.dialogActions button:first-child {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.dialogActions button:last-child {
+  background: #f25a16;
+  color: #ffffff;
+}
+
+.dialogActions button:last-child:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 980px) {
+  .formGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .titleField {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pagination {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pageControls {
+    justify-content: space-between;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+}

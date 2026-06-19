@@ -1,0 +1,93 @@
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+.circle {
+  --progress: 0;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: conic-gradient(#ff5b00 calc(var(--progress) * 1%), #e2e8f0 0);
+  box-shadow: 0 12px 24px rgba(255, 91, 0, 0.18);
+  animation:
+    fillProgress 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    floatCircle 4s ease-in-out infinite;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 28px;
+  width: 90px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  filter: blur(5px);
+  transform: rotate(-18deg);
+}
+
+.innerCircle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.innerCircle h2 {
+  margin: 0;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+  color: #ff5b00;
+  transform: translateY(-12px);
+}
+
+.innerCircle span {
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  letter-spacing: 3px;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1;
+}
+
+@keyframes fillProgress {
+  from {
+    --progress: 0;
+  }
+
+  to {
+    --progress: 75;
+  }
+}
+
+@keyframes floatCircle {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,62 @@
+/* AI Insight Component Styles */
+.ai-card {
+  /* 从原 App.css 继承的 UI 视觉设计 */
+  background: #ffffff; 
+  border-radius: 24px; 
+  padding: 28px;
+  border: 1px solid rgba(15, 23, 42, 0.05); 
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.08); /* 替换了 var(--shadow-soft) */
+
+  /* 组件自身的网格布局 */
+  display: grid;
+  gap: 16px;
+}
+
+/* 从原 App.css 提取的悬浮交互效果 */
+.ai-card:hover {
+  box-shadow: 0 25px 80px rgba(15, 23, 42, 0.08); /* 替换了 var(--shadow) */
+}
+
+.ai-card h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1f7a6d;
+  font-weight: 700;
+}
+
+.ai-card small {
+  display: block;
+  color: #90a0ad;
+  font-size: 0.88rem;
+}
+
+.ai-footer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #7a8a98;
+}
+
+.ai-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eaf8f3;
+  border: 2px solid #1f7a6d;
+  /* 下面这三行是新增的，用来把内部的机器人绝对居中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 1.25rem; /* 控制 emoji 的大小，觉得小可以改成 1.5rem */
+  line-height: 1;     /* 去除 emoji 默认的多余行高 */
+}

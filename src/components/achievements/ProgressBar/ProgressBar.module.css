@@ -1,0 +1,49 @@
+.progressTrack {
+  width: 100%;
+  height: 6px;
+  background: #edf2f8;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.summary {
+  max-width: 1030px;
+  height: 16px;
+  padding: 5px 8px;
+  background: #e7edf6;
+  box-shadow:
+    inset 0 2px 5px rgba(123, 143, 169, 0.2),
+    0 3px 8px rgba(185, 195, 211, 0.28);
+}
+
+.goal {
+  height: 6px;
+}
+
+.progressFill {
+  width: var(--progress-target);
+  height: 100%;
+  background: #efbd94;
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(239, 189, 148, 0.75);
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: fillProgressBar 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fillProgressBar {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progressFill {
+    animation: none;
+    transform: scaleX(1);
+  }
+}

@@ -1,0 +1,154 @@
+.tetrisGame {
+  min-height: 620px;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tetrisHeader {
+  width: 620px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.tetrisHeader span {
+  color: #22d3ee;
+
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.tetrisHeader strong {
+  color: #facc15;
+
+  font-size: 22px;
+}
+
+.tetrisLayout {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 28px;
+}
+
+.tetrisBoard {
+  width: 320px;
+  height: 512px;
+
+  display: grid;
+
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+
+  gap: 3px;
+
+  padding: 10px;
+
+  border-radius: 20px;
+
+  background: rgba(15, 23, 42, 0.9);
+
+  border: 1px solid rgba(34, 211, 238, 0.24);
+
+  box-shadow:
+    0 0 34px rgba(34, 211, 238, 0.16);
+}
+
+.tetrisCell {
+  border-radius: 6px;
+
+  background: rgba(30, 41, 59, 0.95);
+}
+
+.active {
+  background: #22d3ee;
+
+  box-shadow:
+    0 0 14px rgba(34, 211, 238, 0.8);
+}
+
+.fixed {
+  background: #14b8a6;
+
+  box-shadow:
+    0 0 10px rgba(20, 184, 166, 0.6);
+}
+
+.nextPanel {
+  width: 170px;
+
+  padding: 22px;
+
+  border-radius: 20px;
+
+  background: rgba(15, 23, 42, 0.9);
+
+  border: 1px solid rgba(34, 211, 238, 0.24);
+
+  box-shadow:
+    0 0 24px rgba(34, 211, 238, 0.12);
+}
+
+.nextPanel h3 {
+  color: #22d3ee;
+
+  font-size: 20px;
+  font-weight: 900;
+
+  margin-bottom: 18px;
+
+  text-align: center;
+}
+
+.nextGrid {
+  width: 112px;
+  height: 112px;
+
+  margin: 0 auto 20px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  gap: 4px;
+}
+
+.nextCell {
+  border-radius: 5px;
+
+  background: rgba(30, 41, 59, 0.95);
+}
+
+.filled {
+  background: #22d3ee;
+
+  box-shadow:
+    0 0 12px rgba(34, 211, 238, 0.8);
+}
+
+.nextPanel p {
+  color: #94a3b8;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  text-align: center;
+
+  font-weight: 700;
+}
+
+.tetrisTip {
+  margin-top: 18px;
+
+  color: #94a3b8;
+
+  font-weight: 700;
+}

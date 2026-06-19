@@ -1,0 +1,77 @@
+.pageWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+}
+
+.pageContainer {
+  flex: 1;
+  padding: 1rem 1.5rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.headerSection {
+  text-align: center;
+  margin: 2rem 0 2.5rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #475569;
+  margin: 0;
+}
+
+.content {
+  width: 100%;
+  max-width: 760px;
+}
+
+.pillRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 560px) {
+  .pillRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.summaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.18s, transform 0.18s;
+}
+
+.summaryButton:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}

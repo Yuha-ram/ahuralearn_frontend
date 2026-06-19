@@ -1,0 +1,241 @@
+.topNavContainer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 1rem 4rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #0f172a;
+  white-space: nowrap; /* 确保不折行 */
+}
+
+.navHomepage {
+  /* 【修改点】：利用 grid 特性，navLeft 占据左侧空间。
+   * 我们将左侧剩余空间通过 flex 配合 margin 分割。
+   * 这里用 calc 模拟 40% 和 60% 的间距（距离 logo 约 4，距离 search 约 6）。
+   */
+  margin-left: 7vw;
+  margin-right: auto;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.logoTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.navLinkItem {
+  color: #64748b;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.navLinkItem:hover {
+  color: #0f172a;
+}
+
+.activeLink {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.searchContainer {
+  width: 50vw; /* 设置基于屏幕宽度的占位，而不是靠flex挤压 */
+  max-width: 500px;
+  min-width: 300px;
+  /* 【修改点】：因为用 grid 做了绝对居中，不再需要左右 margin */
+  margin: 0;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.searchInput:focus {
+  border-color: #cbd5e1;
+  background-color: #ffffff;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  width: 16px;
+  height: 16px;
+}
+
+.navExtraLinks {
+  display: flex;
+  align-items: center;
+  /* 【修改点】：去除了原本这里的 gap 控制 (你设置过的 gap: 10rem)，
+                 以便拆分由专门的子类(.navLearnWithAI)进行独立的边距控制。 */
+  margin-right: auto;
+  margin-left: 3rem;
+}
+
+.navLearnWithAI {
+  /* 【修改点】：为了能在绝对不影响 My Profile 位置的前提下调整 Learn with AI， 
+                 我们将之前的 gap (10rem) 拆分为左右两部分的 margin。
+                 这里 margin-left 设为 5rem（向右推），margin-right 设为 5rem，总和保持 10rem。
+                 因此，My Profile 就如同被定死了一样原封不动！
+                 你可以自行调节比例 (比如 left: 6rem, right: 4rem)，只要总和等于你想保持的距离即可。 */
+  margin-left: 4rem;
+  margin-right: 6rem;
+}
+
+.navRightIcons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.notificationIconWrapper {
+  position: relative;
+  cursor: pointer;
+  color: #64748b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.notificationIconWrapper:hover {
+  color: #0f172a;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -8px;
+  right: -9px;
+  min-width: 17px;
+  height: 17px;
+  border-radius: 999px;
+  padding: 0 5px;
+  background: #dc2626;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+.avatarWrapper {
+  position: relative;
+}
+
+.avatarImage {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.avatarImage:hover {
+  border-color: #e2e8f0;
+}
+
+.profileDropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  width: 240px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  z-index: 50;
+  display: none;
+  flex-direction: column;
+}
+
+.profileDropdownMenu.dropdownVisible {
+  display: flex;
+}
+
+.dropdownUserInfo {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.dropdownUsername {
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.dropdownEmail {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin: 0.25rem 0 0 0;
+}
+
+.dropdownEnrolled {
+  font-size: 0.8rem;
+  color: #475569;
+  margin: 0.5rem 0 0 0;
+}
+
+.logoutButton {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.logoutButton:hover {
+  background-color: #fee2e2;
+}

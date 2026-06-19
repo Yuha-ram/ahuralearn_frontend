@@ -1,0 +1,162 @@
+.chatContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logoImage {
+  width: 200px;
+  height: auto;
+  opacity: 0.15;
+  user-select: none;
+}
+
+.greetingTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+  letter-spacing: -0.05em;
+  user-select: none;
+  display: inline-block;
+  transform: scaleX(1.15);
+}
+
+.greetingSubTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  margin-top: 1.5rem;
+  user-select: none;
+}
+
+.messageList {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.messageRow {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.userRow {
+  flex-direction: row-reverse;
+}
+
+.aiRow {
+  flex-direction: row;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.userAvatar {
+  background-color: #f1f5f9;
+}
+
+.aiAvatar {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.messageContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.userContent {
+  align-items: flex-end;
+}
+
+.aiContent {
+  align-items: flex-start;
+}
+
+.senderName {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.bubble {
+  padding: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #334155;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.userBubble {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top-right-radius: 0.25rem;
+}
+
+.aiBubble {
+  background-color: #f8fcfc;
+  border: 1px solid #f1f5f9;
+  border-top-left-radius: 0.25rem;
+}
+
+.coursesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.loadingBubble {
+  background-color: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-top-left-radius: 0.25rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #cbd5e1;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}

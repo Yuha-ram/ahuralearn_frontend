@@ -1,0 +1,33 @@
+.subnav {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 48px;
+
+  padding: 26px 36px;
+
+  background: #f5f7fb;
+}
+
+.navLink {
+  text-decoration: none;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #64748b;
+
+  transition: 0.2s ease;
+}
+
+.navLink:hover {
+  color: #ff6b00;
+}
+
+.active {
+  color: #ff6b00;
+}
